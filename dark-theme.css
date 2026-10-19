@@ -1,0 +1,6 @@
+/* The browse carousel now has room for five themes plus the All view. */
+.theme-list { grid-template-columns: repeat(6, 1fr); }
+
+@media (max-width: 760px) {
+  .theme-list { display: flex; }
+}

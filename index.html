@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b12" />
+    <title>Frame — Wallpaper, made daily.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Frame home"><span class="logo-mark">F</span>frame</a>
+      <nav aria-label="Main navigation">
+        <a href="#discover">Discover</a>
+        <a href="#today">New today <span class="nav-dot"></span></a>
+        <a href="#collections">Collections</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span class="theme-icon">☾</span><span class="theme-label">Dark</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="themes-section" id="collections" aria-labelledby="themes-title">
+        <div class="section-heading compact">
+          <div><p class="eyebrow"><span></span> Browse your mood</p><h2 id="themes-title">Find your <em>feeling.</em></h2></div>
+          <p>Hand-picked views for every kind of day.</p>
+        </div>
+        <div class="theme-list" role="list">
+          <button class="theme-card active" type="button" data-theme="all"><img src="chromatic.png" alt="" /><span>All</span><small>06</small></button>
+          <button class="theme-card" type="button" data-theme="nature"><img src="aurora.png" alt="" /><span>Nature</span><small>02</small></button>
+          <button class="theme-card" type="button" data-theme="abstract"><img src="chromatic.png" alt="" /><span>Abstract</span><small>01</small></button>
+          <button class="theme-card" type="button" data-theme="cities"><img src="after-dark.png" alt="" /><span>Cities</span><small>01</small></button>
+          <button class="theme-card" type="button" data-theme="minimal"><img src="soft-geometry.png" alt="" /><span>Minimal</span><small>01</small></button>
+          <button class="theme-card" type="button" data-theme="dark"><img src="nocturne.png" alt="" /><span>Dark</span><small>01</small></button>
+        </div>
+      </section>
+
+      <section class="discover-section" id="discover" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span></span> Curated for your screen</p><h2 id="discover-title">Worth looking <em>at.</em></h2></div>
+          <div class="view-switch" aria-label="Wallpaper view options"><button class="active" aria-label="Grid view">▦</button><button aria-label="List view">☰</button></div>
+        </div>
+        <div class="wallpaper-grid" id="wallpaperGrid">
+          <article class="wallpaper-card tall" data-theme="nature" data-title="Aurora stillness" data-image="aurora.png">
+            <img src="aurora.png" alt="Generated alpine aurora landscape" />
+            <div class="card-overlay"><div><span>Nature / 4K</span><h3>Aurora stillness</h3></div><button type="button" class="download-open" aria-label="Download Aurora stillness">↓</button></div>
+          </article>
+          <article class="wallpaper-card short" data-theme="abstract" data-title="Chromatic bloom" data-image="chromatic.png">
+            <img src="chromatic.png" alt="Generated iridescent abstract glass ribbons" />
+            <div class="card-overlay"><div><span>Abstract / 4K</span><h3>Chromatic bloom</h3></div><button type="button" class="download-open" aria-label="Download Chromatic bloom">↓</button></div>
+          </article>
+          <article class="wallpaper-card short" data-theme="cities" data-title="After dark" data-image="after-dark.png">
+            <img src="after-dark.png" alt="Generated futuristic city skyline at night" />
+            <div class="card-overlay"><div><span>Cities / 4K</span><h3>After dark</h3></div><button type="button" class="download-open" aria-label="Download After dark">↓</button></div>
+          </article>
+          <article class="wallpaper-card tall" data-theme="minimal" data-title="Soft geometry" data-image="soft-geometry.png">
+            <img src="soft-geometry.png" alt="Generated minimal floating sphere sculpture" />
+            <div class="card-overlay"><div><span>Minimal / 4K</span><h3>Soft geometry</h3></div><button type="button" class="download-open" aria-label="Download Soft geometry">↓</button></div>
+          </article>
+          <article class="wallpaper-card wide" data-theme="nature" data-title="Alpine echo" data-image="aurora.png">
+            <img src="aurora.png" alt="Generated aurora over an alpine lake" />
+            <div class="card-overlay"><div><span>Nature / 4K</span><h3>Alpine echo</h3></div><button type="button" class="download-open" aria-label="Download Alpine echo">↓</button></div>
+          </article>
+          <article class="wallpaper-card short" data-theme="dark" data-title="Nocturne" data-image="nocturne.png">
+            <img src="nocturne.png" alt="Generated eclipse over an obsidian desert" />
+            <div class="card-overlay"><div><span>Dark / 4K</span><h3>Nocturne</h3></div><button type="button" class="download-open" aria-label="Download Nocturne">↓</button></div>
+          </article>
+        </div>
+        <button id="loadMore" class="more-button" type="button">Load more wallpapers <span>↓</span></button>
+      </section>
+
+      <section class="daily-section" id="today" aria-labelledby="daily-title">
+        <div class="daily-copy"><p class="eyebrow light"><span></span> Updated daily</p><h2 id="daily-title">Four fresh views.<br /><em>Every morning.</em></h2><p>Our editors add 3–4 new, high-resolution wallpapers each day. No endless feeds—just the good stuff.</p><a href="#discover" class="light-link">See today’s drop <span>↗</span></a></div>
+        <div class="daily-number"><strong>03<span>—</span>04</strong><p>new wallpapers<br />added daily</p></div>
+        <div class="daily-poster"><img src="nocturne.png" alt="Generated eclipse wallpaper" /><span>DAILY<br />DROP</span></div>
+      </section>
+    </main>
+
+    <footer><a class="logo" href="#top"><span class="logo-mark">F</span>frame</a><p>Walls worth waking up to.</p><span>© 2026 Frame</span></footer>
+
+    <dialog id="downloadDialog">
+      <button class="close-dialog" aria-label="Close download options">×</button>
+      <img id="dialogImage" src="" alt="Wallpaper preview" />
+      <div class="dialog-content"><p class="eyebrow"><span></span> Ready to download</p><h2 id="dialogTitle">Wallpaper</h2><p class="dialog-subtitle">Choose the perfect fit for your screen.</p>
+        <div class="option-group"><label>Device</label><div class="option-row" id="deviceOptions"><button class="selected" data-device="desktop">Desktop</button><button data-device="mobile">Mobile</button></div></div>
+        <div class="option-group"><label>Resolution</label><div class="option-row" id="resolutionOptions"><button data-resolution="1920x1080">HD</button><button data-resolution="2560x1440">QHD</button><button class="selected" data-resolution="3840x2160">4K</button></div></div>
+        <div class="option-group"><label>Format</label><div class="option-row" id="formatOptions"><button data-format="jpg">JPG</button><button class="selected" data-format="jpeg">JPEG</button><button data-format="png">PNG</button></div></div>
+        <a id="downloadLink" class="download-button" href="#" download>Download 4K JPEG <span>↓</span></a><p class="fine-print">Free for personal use · High resolution</p>
+      </div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
